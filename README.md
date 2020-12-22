@@ -3,8 +3,8 @@ Short recruitment task [22.12.2020], portable version. Build using Webpack start
 Live preview: https://www.parkitny.eu/rekrutacja/mdboostrap/
 
 ## Author contact info
-E-mail: krzysztof@parkitny.eu
-LinkedIn: https://parkitny.eu/ref/li
+E-mail: krzysztof@parkitny.eu</br>
+LinkedIn: https://parkitny.eu/ref/li</br>
 
 ## Technologies/tools
 Vanilla JS
