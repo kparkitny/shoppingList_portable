@@ -1,5 +1,5 @@
 ## Project info
-Short recruitment task [22.12.2020], portable.
+Short recruitment task [22.12.2020], portable. Build using Webpack starter https://github.com/mdbootstrap/mdb-webpack-starter
 
 ## Author contact info
 
