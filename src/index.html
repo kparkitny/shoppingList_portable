@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Lista zakupów v.Portable [Krzysztof Parkitny]</title>
+  <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    h1 {
+      color: darkslategray;
+    }
+
+    h4 {
+      color: rgb(27, 11, 11)
+    }
+
+    h4 span,
+    h5 span {
+      color: blue;
+    }
+
+    label {
+      line-height: 1.5rem;
+    }
+
+    li {
+      line-height: 2rem;
+    }
+
+    form,
+    span.unitsCont {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .pt-3 {
+      background-color: #EB6464;
+      color: white;
+      padding: 0.6rem 2.3em;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+    }
+
+    button#btnAdd {
+      background-color: #EB6464;
+      color: white;
+      padding: 0.6rem 2.3em;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+    }
+
+    button#btnAdd:hover {
+      background-color: #EB9999;
+    }
+
+    button {
+      background-color: #EB6464;
+      color: white;
+      padding: 0.3rem 1.6em;
+      font-weight: bold;
+      border: none;
+      border-radius: 0.4rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #EB9999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh">
+      <div class="text-center">
+        <h1 class="pt-3">Lista zakupów</h1>
+
+        <form action="">
+          <label for="productName">Nazwa produktu:</label>
+          <input type="text" id="productName" required></br></br>
+
+          <label for="categories">Typ produktu:</label>
+          <select name="categories" id="categories">
+            <option value="" selected disabled hidden required>Wybierz</option>
+            <option value="dairy">nabiał</option>
+            <option value="fruits">owoce</option>
+            <option value="sweets">słodycze</option>
+            <option value="vegetables">warzywa</option>
+            <option value="other">inne...</option>
+          </select></br></br>
+
+          <label for="unit">Jednostka miary:</label>
+          <select name="unit" id="unit">
+            <option value="" selected disabled hidden required>Wybierz</option>
+            <option value="kg">kg</option>
+            <option value="szt">szt</option>
+          </select></br></br>
+
+          <span class="kgCont hidden unitsCont">
+            <label for="productQty">Ilość sztuk [szt] (max 20):</label>
+            <input type="number" id="productQty" name="productQty" min="1" max="20"></br></br>
+          </span>
+          <span class="sztCont hidden unitsCont">
+            <label for="productWeight">Waga [kg] (max 15):</label>
+            <input type="number" id="productWeight" name="productWeight" min="1" max="15"></br></br>
+          </span>
+
+          <button id="btnAdd">Dodaj produkt</button>
+        </form>
+
+        <h4>Nabiał (ilość dodanych pozycji: <span class="dairyCont">0</span>)</h4>
+        <ul id='dairy'></ul>
+
+        <h4>Owoce (ilość dodanych pozycji: <span class="fruitsCont">0</span>)</h4>
+        <ul id='fruits'></ul>
+
+        <h4>Słodycze (ilość dodanych pozycji: <span class="sweetsCont">0</span>)</h4>
+        <ul id='sweets'></ul>
+
+        <h4>Warzywa (ilość dodanych pozycji: <span class="vegetablesCont">0</span>)</h4>
+        <ul id='vegetables'></ul>
+
+        <h4>Inne/pozostałe: (ilość dodanych pozycji: <span class="otherCont">0</span>)</h4>
+        <ul id='other'></ul>
+
+        </br>
+        <h5>Łącznie pozycji dodanych na liście zakupów: <span class="totalCont">0</span></h5>
+
+      </div>
+    </div>
+  </div>
+  <script src="../src/js/main.js"></script>
+</body>
+
+</html>
