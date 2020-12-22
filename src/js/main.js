@@ -77,7 +77,7 @@ const addProduct = (e) => {
     else if (selectCategories.selectedIndex == '3') {
         const sweets = document.createElement('li');
         sweets.className = 'sweets';
-        sweets.innerHTML = `${productName} [${currentUnitValue.value}] ${currentUnit}] <button>Usuń</button>`;
+        sweets.innerHTML = `${productName} [${currentUnitValue.value} ${currentUnit}] <button>Usuń</button>`;
         sweetsList.push(sweets);
         ulSweets.appendChild(sweets);
         sweets.querySelector('button').addEventListener('click', removeSweets);
@@ -85,7 +85,7 @@ const addProduct = (e) => {
     else if (selectCategories.selectedIndex == '4') {
         const vegetables = document.createElement('li');
         vegetables.className = 'vegetables';
-        vegetables.innerHTML = `${productName} [${currentUnitValue.value}] ${currentUnit}] <button>Usuń</button>`;
+        vegetables.innerHTML = `${productName} [${currentUnitValue.value} ${currentUnit}] <button>Usuń</button>`;
         vegetablesList.push(vegetables);
         ulVegetables.appendChild(vegetables);
         vegetables.querySelector('button').addEventListener('click', removeVegetables);
@@ -93,7 +93,7 @@ const addProduct = (e) => {
     else if (selectCategories.selectedIndex == '5') {
         const other = document.createElement('li');
         other.className = 'other';
-        other.innerHTML = `${productName} [${currentUnitValue.value}] ${currentUnit}] <button>Usuń</button>`;
+        other.innerHTML = `${productName} [${currentUnitValue.value} ${currentUnit}] <button>Usuń</button>`;
         otherList.push(other);
         ulOther.appendChild(other);
         other.querySelector('button').addEventListener('click', removeOther);
